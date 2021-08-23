@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>《初见》响应式个人博客模板</title>
+<meta name="keywords" content="个人博客，个人网站，个人博客模板，个人网站模板" />
+<meta name="description" content="《初见》响应式个人博客模板是由前端设计师杨青青（www.qingqingblog.com）于2021年5月份设计完成的，模板主要展示个人博客、相册、视频、介绍等功能。" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/base.css" rel="stylesheet">
+<link href="css/m.css" rel="stylesheet">
+<script src="js/jquery-3.6.0.min.js" ></script>
+<script src="js/comm.js"></script>
+</head>
+<body>
+<header>
+  <div class="box">
+    <div class="logo"><a href="/"><img src="images/logo.png" alt="logo"></a></div>
+    <div class="ad_top"><a href="/"><img src="images/ad01.jpg" alt="广告"></a></div>
+    <div class="contact_icon">
+      <ul>
+        <li><a href="http://wpa.qq.com/msgrd?v=3&uin=476847113&site=qq&menu=yes"><i class="icon_qq"></i></a></li>
+        <li><a href="tel:186491309**"><i class="icon_tel"></i></a></li>
+        <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=476847113@qq.com" target="_blank"><i class="icon_email"></i></a></li>
+        <li><i class="icon_weixin"><img src="images/wx.png" alt="微信号：476847113"></i></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <nav>
+      <ul id="starlist">
+        <li><a href="index.html">网站首页</a></li>
+        <li><a href="blog.html">博文日记</a></li>
+        <li class="menu"><a href="#">所有内容</a>
+          <ul class="sub">
+            <li><a href="blog_info.html">文章内容</a></li>
+            <li><a href="photos_info.html">相册内容</a></li>
+            <li><a href="videos_info.html">视频内容</a></li>
+            <li><a href="page_info.html">单页内容</a></li>
+          </ul>
+          <span></span></li>
+        <li><a href="photos.html">我的相册<i></i></a></li>
+        <li><a href="videos.html">我的视频</a></li>
+        <li><a href="about.html">个人简历</a></li>
+      </ul><h2 id="mnavh"><span class="navicon"></span></h2>
+      <div class="is-search"> <i></i> </div>
+      <div class="search-page">
+        <div class="search_box">
+          <div class="go-left"></div>
+          <div class="search">
+            <form action="http://zhuanti.ip3q.com/e/search/index.php" method="post" name="searchform" id="searchform">
+              <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字词'}" type="text">
+              <input name="show" value="title" type="hidden">
+              <input name="tempid" value="1" type="hidden">
+              <input name="tbname" value="news" type="hidden">
+              <input name="Submit" class="input_submit" value="搜索" type="submit">
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--search end--> 
+    </nav>
+  </div>
+</header>
+<div class="ph_margin"></div>
+<div class="box">
+  <h2 class="h_title">精选视频</h2>
+  <div class="videos">
+    <div class="featured_video_fl"> <a href="/" target="_blank"><i><img src="images/video01.jpg" alt=""></i>
+      <section><span>精选视频</span>
+        <h3>《送你一朵小红花》：每一个努力生活的人都值得被表扬</h3>
+      </section>
+      </a> </div>
+    <div class="featured_video_fr">
+      <ul>
+        <li><a href="/"><i><img src="images/video01.jpg" alt=""></i>
+          <h3>当年如果勇敢该多好</h3>
+          <span>已有 3950 人观看</span></a></li>
+        <li><a href="/"><i><img src="images/02.jpg" alt=""></i>
+          <h3>原来长大结婚，不是自然而然的事</h3>
+          <span>已有 1390 人观看</span></a></li>
+        <li><a href="/"><i><img src="images/03.jpg" alt=""></i>
+          <h3>始于巴黎圣母院，终于墓穴</h3>
+          <span>已有 3790 人观看</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <h2 class="h_title">所有视频</h2>
+  <div class="all_videos">
+    <ul>
+      <li><a href="/" target="_blank"><i><img src="images/01.jpg" alt=""></i>
+        <p>因为路过，所以珍惜</p>
+        <span>已有 3790 人观看</span></a></li>
+      <li><a href="/" target="_blank"><i><img src="images/02.jpg" alt=""></i>
+        <p>不惊艳才长久</p>
+        <span>已有 3790 人观看</span></a></li>
+      <li><a href="/" target="_blank"><i><img src="images/03.jpg" alt=""></i>
+        <p>出场靠后，优势更大</p>
+        <span>已有 3790 人观看</span></a></li>
+      <li><a href="/" target="_blank"><i><img src="images/04.jpg" alt=""></i>
+        <p>海蛎子的生存哲学</p>
+        <span>已有 3790 人观看</span></a></li>
+      <li><a href="/" target="_blank"><i><img src="images/05.jpg" alt=""></i>
+        <p>孤男寡女其实是一种“浪费”</p>
+        <span>已有 3790 人观看</span></a></li>
+      <li><a href="/" target="_blank"><i><img src="images/06.jpg" alt=""></i>
+        <p>残缺的身体，不妨碍我拥有完美人生</p>
+        <span>已有 3790 人观看</span></a></li>
+      <li><a href="/" target="_blank"><i><img src="images/01.jpg" alt=""></i>
+        <p>因为路过，所以珍惜</p>
+        <span>已有 3790 人观看</span></a></li>
+      <li><a href="/" target="_blank"><i><img src="images/02.jpg" alt=""></i>
+        <p>不惊艳才长久</p>
+        <span>已有 3790 人观看</span></a></li>
+      <li><a href="/" target="_blank"><i><img src="images/01.jpg" alt=""></i>
+        <p>因为路过，所以珍惜</p>
+        <span>已有 3790 人观看</span></a></li>
+      <li><a href="/" target="_blank"><i><img src="images/02.jpg" alt=""></i>
+        <p>不惊艳才长久</p>
+        <span>已有 3790 人观看</span></a></li>
+      <li><a href="/" target="_blank"><i><img src="images/03.jpg" alt=""></i>
+        <p>出场靠后，优势更大</p>
+        <span>已有 3790 人观看</span></a></li>
+      <li><a href="/" target="_blank"><i><img src="images/04.jpg" alt=""></i>
+        <p>海蛎子的生存哲学</p>
+        <span>已有 3790 人观看</span></a></li>
+      
+    </ul>
+   
+  </div>
+   <div class="epages"><a title="Total record">&nbsp;<b>92</b> </a>&nbsp;&nbsp;&nbsp;<b>1</b>&nbsp;<a href="/">2</a>&nbsp;<a href="/">3</a>&nbsp;<a href="/">4</a>&nbsp;<a href="/">下一页</a>&nbsp;<a href="/">尾页</a></div>
+</div>
+<footer>
+  <div class="box">
+    <ul class="footer_nav">
+      <li><a href="/" target="_blank">网站地图</a></li>
+      <li><a href="all_list.html" target="_blank">所有文章</a></li>
+      <li><a href="tags.html" target="_blank">标签合集</a></li>
+      <li><a href="/" target="_blank">访问统计</a></li>
+    </ul>
+    <div class="guanzhu_img"><i><img src="images/wx.png" alt="微信:4768447113">微信号</i> <i><img src="images/wxgzh.jpg" alt="微信:4768447113">微信公众号</i></div>
+    <div class="copyright">
+      <p>杨青青个人博客网站 版权所有 </p>
+      <p>Copyright © <a href="https://www.qingqingblog.com/" target="_blank">www.qingqingblog.com</a> All Rights Reserved.</p>
+      <p>备案号：<a href="http://www.beian.miit.gov.cn/" target="_blank">津ICP备20005778号-1</a><i class="ga"><img src="images/ga.png" alt="公安备案号"></i>津公网安备 12011602000448 号</p>
+    </div>
+  </div>
+</footer>
+<a href="#" title="返回顶部" class="icon-top"></a>
+</body>
+</html>
