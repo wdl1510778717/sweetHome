@@ -1,90 +1,94 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>《初见》响应式个人博客模板</title>
-<meta name="keywords" content="个人博客，个人网站，个人博客模板，个人网站模板" />
-<meta name="description" content="《初见》响应式个人博客模板是由前端设计师杨青青（www.qingqingblog.com）于2021年5月份设计完成的，模板主要展示个人博客、相册、视频、介绍等功能。" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="css/base.css" rel="stylesheet">
-<link href="css/m.css" rel="stylesheet">
-<script src="js/jquery-3.6.0.min.js" ></script>
-<script src="js/comm.js"></script>
+    <meta charset="utf-8">
+    <title>《初见》</title>
+    <meta name="keywords" content="个人博客，个人网站" />
+    <meta name="description" content="《初见》响应式个人博客,主要展示个人博客、相册、视频、介绍等功能。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/m.css" rel="stylesheet">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/comm.js"></script>
 </head>
+
 <body>
-<header>
-  <div class="box">
-    <div class="logo"><a href="/"><img src="images/logo.png" alt="logo"></a></div>
-    <div class="ad_top"><a href="/"><img src="images/ad01.jpg" alt="广告"></a></div>
-    <div class="contact_icon">
-      <ul>
-        <li><a href="http://wpa.qq.com/msgrd?v=3&uin=476847113&site=qq&menu=yes"><i class="icon_qq"></i></a></li>
-        <li><a href="tel:186491309**"><i class="icon_tel"></i></a></li>
-        <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=476847113@qq.com" target="_blank"><i class="icon_email"></i></a></li>
-        <li><i class="icon_weixin"><img src="images/wx.png" alt="微信号：476847113"></i></li>
-      </ul>
-    </div>
-    <div class="clear"></div>
-    <nav>
-      <ul id="starlist">
-        <li><a href="index.html">网站首页</a></li>
-        <li><a href="blog.html">博文日记</a></li>
-        <li class="menu"><a href="#">所有内容</a>
-          <ul class="sub">
-            <li><a href="blog_info.html">文章内容</a></li>
-            <li><a href="photos_info.html">相册内容</a></li>
-            <li><a href="videos_info.html">视频内容</a></li>
-            <li><a href="page_info.html">单页内容</a></li>
-          </ul>
-          <span></span></li>
-        <li><a href="photos.html">我的相册<i></i></a></li>
-        <li><a href="videos.html">我的视频</a></li>
-        <li><a href="about.html">个人简历</a></li>
-      </ul><h2 id="mnavh"><span class="navicon"></span></h2>
-      <div class="is-search"> <i></i> </div>
-      <div class="search-page">
-        <div class="search_box">
-          <div class="go-left"></div>
-          <div class="search">
-            <form action="http://zhuanti.ip3q.com/e/search/index.php" method="post" name="searchform" id="searchform">
-              <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字词'}" type="text">
-              <input name="show" value="title" type="hidden">
-              <input name="tempid" value="1" type="hidden">
-              <input name="tbname" value="news" type="hidden">
-              <input name="Submit" class="input_submit" value="搜索" type="submit">
-            </form>
-          </div>
+    <header>
+        <div class="box">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="logo"></a>
+            </div>
+            <div class="ad_top">
+                <a href="#" οnclick="return false"><img src="images/ad01.jpg" alt="广告"></a>
+            </div>
+            <div class="contact_icon">
+                <ul>
+                    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=153694734&site=qq&menu=yes"><i class="icon_qq"></i></a></li>
+                    <li><a href="tel:18792800701"><i class="icon_tel"></i></a></li>
+                    <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1510778717@qq.com" target="_blank"><i
+                class="icon_email"></i></a></li>
+                    <li><i class="icon_weixin"><img src="images/wx.png" alt="微信号：476847113"></i></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <nav>
+                <ul id="starlist">
+                    <li><a href="index.html">网站首页</a></li>
+                    <li><a href="blog.html">博文日记</a></li>
+                    <li class="menu"><a href="#">所有内容</a>
+                        <ul class="sub">
+                            <li><a href="blog_info.html">文章内容</a></li>
+                            <li><a href="photos_info.html">相册内容</a></li>
+                            <li><a href="videos_info.html">视频内容</a></li>
+                            <li><a href="page_info.html">单页内容</a></li>
+                        </ul>
+                        <span></span>
+                    </li>
+                    <li><a href="photos.html">我的相册<i></i></a></li>
+                    <li><a href="videos.html">我的视频</a></li>
+                    <li><a href="about.html">个人简历</a></li>
+                </ul>
+                <h2 id="mnavh"><span class="navicon"></span></h2>
+                <div class="is-search"> <i></i> </div>
+                <div class="search-page">
+                    <div class="search_box">
+                        <div class="go-left"></div>
+                        <div class="search">
+                            <form action="http://zhuanti.ip3q.com/e/search/index.php" method="post" name="searchform" id="searchform">
+                                <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字词'}" type="text">
+                                <input name="show" value="title" type="hidden">
+                                <input name="tempid" value="1" type="hidden">
+                                <input name="tbname" value="news" type="hidden">
+                                <input name="Submit" class="input_submit" value="搜索" type="submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--search end-->
+            </nav>
         </div>
-      </div>
-      <!--search end--> 
-    </nav>
-  </div>
-</header>
-<div class="ph_margin"></div>
-<div class="box">
-  <div class="page_tags">
-    <div class="weizhi">您当前的位置：<a href="">首页</a>&nbsp;&gt;&nbsp;<a href="/">博文日记</a></div>
-    <ul>
-      <a href="/" target="_blank">创业故事</a> <a href="/" target="_blank">女站长</a> <a href="/" target="_blank">空间</a> <a href="/" target="_blank">企业改版</a> <a href="/" target="_blank">在家办公</a> <a href="/" target="_blank">疫情</a> <a href="/" target="_blank">装win系统</a> <a href="/" target="_blank">新闻网站模板</a> <a href="/" target="_blank">资讯模板</a> <a href="/" target="_blank">培训简介</a> <a href="/" target="_blank">个人简历</a>
-    </ul>
-  </div>
-</div>
-<footer>
-  <div class="box">
-    <ul class="footer_nav">
-      <li><a href="/" target="_blank">网站地图</a></li>
-      <li><a href="all_list.html" target="_blank">所有文章</a></li>
-      <li><a href="tags.html" target="_blank">标签合集</a></li>
-      <li><a href="/" target="_blank">访问统计</a></li>
-    </ul>
-    <div class="guanzhu_img"><i><img src="images/wx.png" alt="微信:4768447113">微信号</i> <i><img src="images/wxgzh.jpg" alt="微信:4768447113">微信公众号</i></div>
-    <div class="copyright">
-      <p>杨青青个人博客网站 版权所有 </p>
-      <p>Copyright © <a href="https://www.qingqingblog.com/" target="_blank">www.qingqingblog.com</a> All Rights Reserved.</p>
-      <p>备案号：<a href="http://www.beian.miit.gov.cn/" target="_blank">津ICP备20005778号-1</a><i class="ga"><img src="images/ga.png" alt="公安备案号"></i>津公网安备 12011602000448 号</p>
+    </header>
+    <div class="ph_margin"></div>
+    <div class="box">
+        <div class="page_tags">
+            <div class="weizhi">您当前的位置：<a href="">首页</a>&nbsp;&gt;&nbsp;<a href="#">博文日记</a></div>
+            <ul>
+                <a href="#" target="_blank">创业故事</a> <a href="#" target="_blank">女站长</a> <a href="#" target="_blank">空间</a> <a href="#" target="_blank">企业改版</a> <a href="#" target="_blank">在家办公</a> <a href="#" target="_blank">疫情</a> <a href="#" target="_blank">装win系统</a>                <a href="#" target="_blank">新闻网站模板</a> <a href="#" target="_blank">资讯模板</a> <a href="#" target="_blank">培训简介</a> <a href="#" target="_blank">个人简历</a>
+            </ul>
+        </div>
     </div>
-  </div>
-</footer>
-<a href="#" title="返回顶部" class="icon-top"></a>
+    <footer>
+        <div class="box">
+            <ul class="footer_nav">
+                <li><a href="all_list.html" target="_blank">所有文章</a></li>
+                <li><a href="tags.html" target="_blank">标签合集</a></li>
+            </ul>
+            <div class="guanzhu_img"><i><img src="images/wx.png" alt="微信:18792800701">微信号</i> <i><img
+            src="images/beautifulPicture.png" alt="我的相册">我的图集</i></div>
+        </div>
+    </footer>
+    <a href="#" title="返回顶部" class="icon-top"></a>
 </body>
+
 </html>
