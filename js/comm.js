@@ -60,4 +60,18 @@ $(document).ready(function() {
         localStorage.setItem("videoId", id);
         $(this).attr("href", url)
     })
+    $(".featured_video_fr .item").click(function(event) {
+        let id = $(this).attr("data-id")
+        let url = $(this).attr("data-url")
+        localStorage.setItem("videoId", id);
+        $(this).attr("href", url)
+    })
+    $(".featured_video_fl .item").click(function(event) {
+        let id = $(this).attr("data-id")
+        let url = $(this).attr("data-url")
+        localStorage.setItem("videoId", id);
+        $(this).attr("href", url)
+    })
+
+    //article
 });
