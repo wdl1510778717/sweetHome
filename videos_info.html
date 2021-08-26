@@ -9,26 +9,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/base.css" rel="stylesheet">
     <link href="css/m.css" rel="stylesheet">
+    <script src="js/videoData.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/comm.js"></script>
     <script src="js/open.js"></script>
 </head>
 
+<script>
+    $(document).ready(function() {
+
+        function initContent() {
+            var len = 9; // 默认显示的字数
+            var content = document.getElementById("content"); // content 获取内容 div 对象
+            var text = content.innerHTML; // text 为内容
+            var span = document.createElement("span"); // 创建一个 SPAN 标签
+            var n = document.createElement("a"); // 创建一个 A 标签
+            span.innerHTML = text.substring(0, len); // SPAN 标签的内容为 text 的前 len 个字符
+            n.innerHTML = text.length > len ? "...展开" : ""; // 创建的 A 标签内容，如果内容字数大于 len，那么为“..展开”，否则为空
+            n.href = "javascript:void(0)"; // 设置 A 标签的链接地址（随意）
+            n.onclick = function() { // 点击 A 链接执行下面函数
+                // 如果 A 标签的内容为“..展开”，那么 A 标签内容变成“收起”，SPAN 标签的内容为 DIV 全部内容，否则内容为前 len 个字符
+                if (n.innerHTML == "...展开") {
+                    n.innerHTML = "收起";
+                    span.innerHTML = text;
+                } else {
+                    n.innerHTML = "...展开";
+                    span.innerHTML = text.substring(0, len);
+                }
+            }
+            content.innerHTML = ""; // 设置 DIV 内容为空
+            content.appendChild(span); // 把 SPAN 元素加到 DIV 中
+            content.appendChild(n); // 把 A 元素加到 DIV 中
+        }
+
+        var tagsClass = "color: #98989b; display: inline-block; background: #303137; padding: 5px 8px; margin-right: 8px; margin-bottom: 8px; border-radius: 3px"
+
+        var title = $(".play_info .name"),
+            hot = $(".play_info .play_click"),
+            pkayTime = $(".play_info .play_time"),
+            content = $(".play_info .play_about"),
+            diggnum = $(".play_info #diggnum"),
+            play_video = $(".play_video"),
+            play_tags = $(".play_info .play_tags");
+
+        let videoId = localStorage.getItem("videoId");
+
+        videoData.forEach(element => {
+            if (element.id == videoId) {
+                title.text(element.name)
+                hot.text(element.hot)
+                pkayTime.text(element.pkayTime)
+                content.text(element.content)
+                let html = ""
+                element.play_tags.forEach(tag => {
+                    html += "<a" + ' ' + 'style= ' + tagsClass + 'href=JavaScript:void(0)' + "> " + tag + "</a>"
+                });
+                play_tags.html(html)
+                diggnum.text(element.diggnum)
+                diggnum.on('click', function(event) {
+                    event.preventDefault();
+                    element.diggnum++
+                });
+                play_video.html("")
+                let video = "<video controls height='450' id='ecmsvideoid' width='100%' webkit-playsinline playsinline x5-playsinline x-webkit-airplay='allow'> <source class='source_box' src='" + element.src + "'/></video>"
+                play_video.append(video)
+            }
+        });
+        initContent()
+
+        $(".all_videos a").click(function(event) {
+            event.stopPropagation();
+            let id = $(this).attr("data-id")
+            let url = $(this).attr("data-url")
+            videoData.forEach(element => {
+                if (element.id == id) {
+                    title.text(element.name)
+                    hot.text(element.hot)
+                    pkayTime.text(element.pkayTime)
+                    content.text(element.content)
+                    let html = ""
+                    element.play_tags.forEach(tag => {
+                        html += "<a" + ' ' + 'style= ' + tagsClass + 'href=JavaScript:void(0)' + "> " + tag + "</a>"
+                    });
+                    play_tags.html(html)
+                    diggnum.text(element.diggnum)
+                    diggnum.on('click', function(event) {
+                        event.preventDefault();
+                        element.diggnum++
+                    });
+                    play_video.html("")
+                    let video = "<video controls height='450' id='ecmsvideoid' width='100%' webkit-playsinline playsinline x5-playsinline x-webkit-airplay='allow'> <source class='source_box' src='" + element.src + "'/></video>"
+                    play_video.append(video)
+                }
+            });
+            initContent()
+        });
+    })
+</script>
+
 <body>
     <header>
         <div class="box">
             <div class="logo">
-                <a href="#"><img src="images/logo.png" alt="logo"></a>
+                <a href="JavaScript:void(0)"><img src="images/logo.png" alt="logo"></a>
             </div>
             <div class="ad_top">
-                <a href="#" οnclick="return false"><img src="images/ad01.jpg" alt="广告"></a>
+                <a href="JavaScript:void(0)" οnclick="return false"><img src="images/ad01.jpg" alt="广告"></a>
             </div>
             <div class="contact_icon">
                 <ul>
-                    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=153694734&site=qq&menu=yes"><i class="icon_qq"></i></a></li>
+                    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=153694734&site=qq&menu=yes"><i class="icon_qq"></i></a>
+                    </li>
                     <li><a href="tel:18792800701"><i class="icon_tel"></i></a></li>
-                    <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1510778717@qq.com" target="_blank"><i
-                class="icon_email"></i></a></li>
+                    <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1510778717@qq.com"><i
+                                class="icon_email"></i></a></li>
                     <li><i class="icon_weixin"><img src="images/wx.png" alt="微信号：18792800701"></i></li>
                 </ul>
             </div>
@@ -37,7 +131,7 @@
                 <ul id="starlist">
                     <li><a href="index.html">网站首页</a></li>
                     <li><a href="blog.html">博文日记</a></li>
-                    <li class="menu"><a href="#">所有内容</a>
+                    <li class="menu"><a href="JavaScript:void(0)">所有内容</a>
                         <ul class="sub">
                             <li><a href="blog_info.html">文章内容</a></li>
                             <li><a href="photos_info.html">相册内容</a></li>
@@ -75,20 +169,20 @@
         <div class="box">
             <div class="play_content">
                 <div class="play_video">
-                    <video controls height="450" id="ecmsvideoid" width="100%" webkit-playsinline playsinline x5-playsinline x-webkit-airplay="allow">
-            <source src="videos/早安问候气泡水问候正能量.mp4" />
-          </video>
+                    <!-- <video controls height="450" id="ecmsvideoid" width="100%" webkit-playsinline playsinline x5-playsinline x-webkit-airplay="allow">
+                        <source class="source_box" src="videos/v03.mp4" />
+                    </video> -->
                 </div>
                 <div class="play_info">
                     <section>
-                        <h1>盛世(电视剧《骊歌行》片头曲伴奏 -陆虎) </h1>
+                        <h1 class="name">盛世(电视剧《骊歌行》片头曲伴奏 -陆虎) </h1>
                         <p class="play_click">热度：2945</p>
                         <p class="play_time">时间：2021年4月16日</p>
                         <p class="play_about" id="content">
                             简介：许凯和李一桐主演的古装大剧《骊歌行》,从筹备到开播,一直以来都备受关注和期待,而电视剧播出后也是非常成功的,故事剧情和场景布置都非常的精彩唯美,而演员们的表现。</p>
-                        <div class="play_tags"><a href="#" target="_blank">普通话</a><a href="#" target="_blank">电视剧</a><a href="#" target="_blank">片头曲</a><a href="#" target="_blank">《骊歌行》</a></div>
-                        <div class="diggit"> <a href="JavaScript:makeRequest('/','EchoReturnedText','GET','');"> 很赞哦！ (<b
-                  id="diggnum">3</b>)</a> </div>
+                        <div class="play_tags"><a href="JavaScript:void(0)">普通话</a><a href="JavaScript:void(0)">电视剧</a><a href="JavaScript:void(0)">片头曲</a><a href="JavaScript:void(0)">《骊歌行》</a></div>
+                        <div class="diggit"> <a href="JavaScript:void(0)"> 很赞哦！
+                                (<b id="diggnum">3</b>)</a> </div>
                     </section>
                 </div>
             </div>
@@ -99,49 +193,65 @@
         <h2 class="h_title">猜你喜欢</h2>
         <div class="all_videos">
             <ul>
-                <li><a href="#" target="_blank"><i><img src="images/01.jpg" alt=""></i>
-            <p>因为路过，所以珍惜</p>
-            <span>已有 3790 人观看</span>
-          </a></li>
-                <li><a href="#" target="_blank"><i><img src="images/02.jpg" alt=""></i>
-            <p>不惊艳才长久</p>
-            <span>已有 3790 人观看</span>
-          </a></li>
-                <li><a href="#" target="_blank"><i><img src="images/03.jpg" alt=""></i>
-            <p>出场靠后，优势更大</p>
-            <span>已有 3790 人观看</span>
-          </a></li>
-                <li><a href="#" target="_blank"><i><img src="images/04.jpg" alt=""></i>
-            <p>海蛎子的生存哲学</p>
-            <span>已有 3790 人观看</span>
-          </a></li>
-                <li><a href="#" target="_blank"><i><img src="images/05.jpg" alt=""></i>
-            <p>孤男寡女其实是一种“浪费”</p>
-            <span>已有 3790 人观看</span>
-          </a></li>
-                <li><a href="#" target="_blank"><i><img src="images/06.jpg" alt=""></i>
-            <p>残缺的身体，不妨碍我拥有完美人生</p>
-            <span>已有 3790 人观看</span>
-          </a></li>
-                <li><a href="#" target="_blank"><i><img src="images/01.jpg" alt=""></i>
-            <p>因为路过，所以珍惜</p>
-            <span>已有 3790 人观看</span>
-          </a></li>
-                <li><a href="#" target="_blank"><i><img src="images/02.jpg" alt=""></i>
-            <p>不惊艳才长久</p>
-            <span>已有 3790 人观看</span>
-          </a></li>
+                <li><a href="JavaScript:void(0)" data-id="100001"><i><img src="images/01.jpg" alt=""></i>
+                        <p>盛世(电视剧《骊歌行》片头曲伴奏 -陆虎)</p>
+                        <span>热度：945</span>
+                    </a></li>
+                <li><a href="JavaScript:void(0)" data-id="100002"><i><img src="images/01.jpg" alt=""></i>
+                        <p>音阙诗听-赵方婧-芒种</p>
+                        <span>热度：1913万</span>
+                    </a></li>
+                <li><a href="JavaScript:void(0)" data-id="100003"><i><img src="images/01.jpg" alt=""></i>
+                        <p>音阙诗听-红昭愿</p>
+                        <span>热度：321万</span>
+                    </a></li>
+                <li><a href="JavaScript:void(0)" data-id="100004"><i><img src="images/01.jpg" alt=""></i>
+                        <p>蔡徐坤-迷</p>
+                        <span>热度：868万</span>
+                    </a></li>
+                <li><a href="JavaScript:void(0)" data-id="100005"><i><img src="images/01.jpg" alt=""></i>
+                        <p>姚慧-你的情歌</p>
+                        <span>热度：502</span>
+                    </a></li>
+                <li><a href="JavaScript:void(0)" data-id="100006"><i><img src="images/01.jpg" alt=""></i>
+                        <p>梁静茹-再见，少年</p>
+                        <span>热度：6.84万</span>
+                    </a></li>
+                <li><a href="JavaScript:void(0)" data-id="100007"><i><img src="images/01.jpg" alt=""></i>
+                        <p>金贵晟-虹之间</p>
+                        <span>热度：1106万</span>
+                    </a></li>
+                <li><a href="JavaScript:void(0)" data-id="100008"><i><img src="images/01.jpg" alt=""></i>
+                        <p>《你一定要幸福》</p>
+                        <span>热度：268万</span>
+                    </a></li>
+                <li><a href="JavaScript:void(0)" data-id="100009"><i><img src="images/01.jpg" alt=""></i>
+                        <p>《骁》</p>
+                        <span>热度：53.4万</span>
+                    </a></li>
+                <li><a href="JavaScript:void(0)" data-id="100010"><i><img src="images/01.jpg" alt=""></i>
+                        <p>少女时代-Divine</p>
+                        <span>热度：421万</span>
+                    </a></li>
+                <li><a href="JavaScript:void(0)" data-id="100011"><i><img src="images/01.jpg" alt=""></i>
+                        <p>林宥嘉-天将明 (《秦时明月》</p>
+                        <span>热度：371万</span>
+                    </a></li>
+                <li><a href="JavaScript:void(0)" data-id="100012"><i><img src="images/01.jpg" alt=""></i>
+                        <p>林宥嘉-天将明 (《秦时明月》</p>
+                        <span>热度：406万</span>
+                    </a></li>
             </ul>
         </div>
     </div>
     <footer>
         <div class="box">
             <ul class="footer_nav">
-                <li><a href="all_list.html" target="_blank">所有文章</a></li>
-                <li><a href="tags.html" target="_blank">标签合集</a></li>
+                <li><a href="all_list.html">所有文章</a></li>
+                <li><a href="tags.html">标签合集</a></li>
             </ul>
-            <div class="guanzhu_img"><i><img src="images/wx.png" alt="微信:18792800701">微信号</i> <i><img src="images/wxgzh.png"
-            alt="我的相册">我的图集</i></div>
+            <div class="guanzhu_img"><i><img src="images/wx.png" alt="微信:18792800701">微信号</i> <i><img
+                        src="images/beautifulPicture.png" alt="我的相册">我的图集</i></div>
         </div>
     </footer>
     <a href="#" title="返回顶部" class="icon-top"></a>
