@@ -1,14 +1,15 @@
 var videoData = [{
         id: 100001,
-        name: "盛世(电视剧《骊歌行》片头曲伴奏 -陆虎)",
-        hot: "热度：945",
-        pkayTime: "时间：2021年4月16日",
-        content: "简介：许凯和李一桐主演的古装大剧《骊歌行》,从筹备到开播,一直以来都备受关注和期待,而电视剧播出后也是非常成功的,故事剧情和场景布置都非常的精彩唯美,而演员们的表现。",
+        name: "张碧晨-光的方向 (《长歌行》电视剧片头主题曲)",
+        hot: "热度：332万",
+        pkayTime: "时间：2021年4月6日",
+        content: "简介：张碧晨-光的方向 (《长歌行》电视剧片头主题曲)",
         play_tags: [
-            "普通话", "电视剧", "片头曲", "《骊歌行》"
+            "普通话", "电视剧", "片头曲", "《骊歌行》", "高清"
         ],
         diggnum: 40,
-        src: "videos/v03.mp4"
+        src: "videos/张碧晨-光的方向 (《长歌行》电视剧片头主题曲)(高清).mp4",
+        href: "images/videos/离歌行.jpeg",
     },
     {
         id: 100002,
@@ -20,7 +21,8 @@ var videoData = [{
             "高清", "24节气"
         ],
         diggnum: 40,
-        src: "videos/音阙诗听-赵方婧-芒种(高清).mp4"
+        src: "videos/音阙诗听-赵方婧-芒种(高清).mp4",
+        href: "images/videos/芒种.jpeg",
     },
     {
         id: 100003,
@@ -32,7 +34,8 @@ var videoData = [{
             "高清",
         ],
         diggnum: 40,
-        src: "videos/音阙诗听-红昭愿(高清).mp4"
+        src: "videos/音阙诗听-红昭愿(高清).mp4",
+        href: "images/videos/红昭愿.jpeg",
     },
     {
         id: 100004,
@@ -44,7 +47,8 @@ var videoData = [{
             "高清",
         ],
         diggnum: 40,
-        src: "videos/蔡徐坤-迷(高清).mp4"
+        src: "videos/蔡徐坤-迷(高清).mp4",
+        href: "images/videos/蔡徐坤-迷.jpeg",
     },
     {
         id: 100005,
@@ -56,7 +60,8 @@ var videoData = [{
             "高清",
         ],
         diggnum: 40,
-        src: "videos/姚慧-名为你的时光 (电影《你的情歌》推广曲)(高清).mp4"
+        src: "videos/姚慧-名为你的时光 (电影《你的情歌》推广曲)(高清).mp4",
+        href: "images/videos/姚慧-你的情歌.jpeg",
     },
     {
         id: 100006,
@@ -68,7 +73,8 @@ var videoData = [{
             "高清",
         ],
         diggnum: 40,
-        src: "videos/梁静茹-再见，少年 (《再见，少年》电影同名主题曲)(高清).mp4"
+        src: "videos/梁静茹-再见，少年 (《再见，少年》电影同名主题曲)(高清).mp4",
+        href: "images/videos/梁静茹-再见，少年.jpeg",
     },
     {
         id: 100007,
@@ -80,7 +86,8 @@ var videoData = [{
             "高清",
         ],
         diggnum: 40,
-        src: "videos/金贵晟-虹之间 (《爱情公寓4》电视剧插曲)(高清).mp4"
+        src: "videos/金贵晟-虹之间 (《爱情公寓4》电视剧插曲)(高清).mp4",
+        href: "images/videos/金贵晟-虹之间.jpeg",
     },
     {
         id: 100008,
@@ -92,7 +99,8 @@ var videoData = [{
             "超清",
         ],
         diggnum: 40,
-        src: "videos/笑希晰-夜深人静的时候会想听听这首《你一定要幸福》！深情翻唱~(超清).mp4"
+        src: "videos/笑希晰-夜深人静的时候会想听听这首《你一定要幸福》！深情翻唱~(超清).mp4",
+        href: "images/videos/你一定要幸福.jpeg",
     },
     {
         id: 100009,
@@ -104,7 +112,8 @@ var videoData = [{
             "蓝光",
         ],
         diggnum: 40,
-        src: "videos/小小晏然-井胧&井迪儿《骁》歌颂中华民族博大深邃的历史文化，中国力量！(蓝光).mp4"
+        src: "videos/小小晏然-井胧&井迪儿《骁》歌颂中华民族博大深邃的历史文化，中国力量！(蓝光).mp4",
+        href: "images/videos/骁.jpeg",
     },
     {
         id: 100010,
@@ -116,7 +125,8 @@ var videoData = [{
             "高清", "少女时代",
         ],
         diggnum: 40,
-        src: "videos/少女时代-Divine(高清).mp4"
+        src: "videos/少女时代-Divine(高清).mp4",
+        href: "images/videos/少女时代-Divine.jpeg",
     },
     {
         id: 100011,
@@ -128,11 +138,12 @@ var videoData = [{
             "高清",
         ],
         diggnum: 40,
-        src: "videos/林宥嘉-天将明 (《秦时明月》电视剧主题曲)(高清).mp4"
+        src: "videos/林宥嘉-天将明 (《秦时明月》电视剧主题曲)(高清).mp4",
+        href: "images/videos/林宥嘉-天将明.jpeg",
     },
     {
         id: 100012,
-        name: "林宥嘉-天将明 (《秦时明月》",
+        name: "林宥嘉-当归 (《秦时明月》",
         hot: "热度：406万",
         pkayTime: "时间：2015年11月2日",
         content: "简介：周蕙-当归 (《秦时明月》电视剧片尾曲)(高清)",
@@ -140,6 +151,7 @@ var videoData = [{
             "高清",
         ],
         diggnum: 40,
-        src: "videos/周蕙-当归 (《秦时明月》电视剧片尾曲)(高清).mp4"
+        src: "videos/周蕙-当归 (《秦时明月》电视剧片尾曲)(高清).mp4",
+        href: "images/videos/林宥嘉-当归.jpeg",
     },
 ]
