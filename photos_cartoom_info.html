@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>《初见》</title>
+    <meta name="keywords" content="个人博客，个人网站" />
+    <meta name="description" content="《初见》响应式个人博客模,主要展示个人博客、相册、视频、介绍等功能。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/m.css" rel="stylesheet">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/comm.js"></script>
+    <script src="js/photo_text_open.js"></script>
+    <!--fancybox-->
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <script src="js/jquery.fancybox.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="box">
+            <div class="logo">
+                <a href="JavaScript:void(0)"><img src="images/public/logo.png" alt="logo"></a>
+            </div>
+            <div class="ad_top">
+                <a href="JavaScript:void(0)" οnclick="return false"><img src="images/public/ad01.jpg" alt="广告"></a>
+            </div>
+            <div class="contact_icon">
+                <ul>
+                    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=153694734&site=qq&menu=yes"><i class="icon_qq"></i></a>
+                    </li>
+                    <li><a href="tel:18792800701"><i class="icon_tel"></i></a></li>
+                    <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1510778717@qq.com"><i
+                                class="icon_email"></i></a></li>
+                    <li><i class="icon_weixin"><img src="images/public/wx.png" alt="微信号：18792800701"></i></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <nav>
+                <ul id="starlist">
+                    <li><a href="index.html">网站首页</a></li>
+                    <li><a href="blog.html">博文日记</a></li>
+                    <li class="menu"><a href="JavaScript:void(0)">所有内容</a>
+                        <ul class="sub">
+
+
+
+                            <li><a href="page_info.html">单页内容</a></li>
+                        </ul>
+                        <span></span>
+                    </li>
+                    <li><a href="photos.html">我的相册<i></i></a></li>
+                    <li><a href="videos.html">我的视频</a></li>
+                    <li><a href="about.html">个人简历</a></li>
+                </ul>
+                <h2 id="mnavh"><span class="navicon"></span></h2>
+                <div class="is-search"> <i></i> </div>
+                <div class="search-page">
+                    <div class="search_box">
+                        <div class="go-left"></div>
+                        <div class="search">
+                            <form action="http://zhuanti.ip3q.com/e/search/index.php" method="post" name="searchform" id="searchform">
+                                <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字词'}" type="text">
+                                <input name="show" value="title" type="hidden">
+                                <input name="tempid" value="1" type="hidden">
+                                <input name="tbname" value="news" type="hidden">
+                                <input name="Submit" class="input_submit" value="搜索" type="submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--search end-->
+            </nav>
+        </div>
+    </header>
+    <div class="ph_margin"></div>
+    <div class="box">
+        <div class="pic_page_box">
+            <div class="album_box">
+                <div class="album_info"> <i><img src="images/cartoon/100007.jpg" alt=""></i>
+                    <h1>卡通<span>13张</span></h1>
+                    <p class="a_i_ms" id="content"><em>描述</em>江上几人在,天涯孤棹还。何当重相见,尊酒慰离颜。</p>
+                    <p class="a_i_time"><em>时间</em>2021年08月27日创建</p>
+                </div>
+                <div class="visitor_area">
+                    <ul>
+                        <li>访客<span>998</span></li>
+                        <li>评论<span>56</span></li>
+                        <li>点赞<span>887</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="pics_content">
+                <ul>
+                    <li><a href="images/cartoon/100001.jpg" data-fancybox="group" data-caption="图片文字说明1"><i><img
+                                    src="images/cartoon/100001.jpg" alt=""></i></a></li>
+                    <li><a href="images/cartoon/100002.jpg" data-fancybox="group" data-caption="图片文字说明2"><i><img
+                                    src="images/cartoon/100002.jpg" alt=""></i></a></li>
+                    <li><a href="images/cartoon/100003.jpg" data-fancybox="group" data-caption="图片文字说明3"><i><img
+                                    src="images/cartoon/100003.jpg" alt=""></i></a></li>
+                    <li><a href="images/cartoon/100004.jpg" data-fancybox="group" data-caption="图片文字说明4"><i><img
+                                    src="images/cartoon/100004.jpg" alt=""></i></a></li>
+                    <li><a href="images/cartoon/100005.jpg" data-fancybox="group" data-caption="图片文字说明5"><i><img
+                                    src="images/cartoon/100005.jpg" alt=""></i></a></li>
+                    <li><a href="images/cartoon/100006.jpg" data-fancybox="group" data-caption="图片文字说明6"><i><img
+                                    src="images/cartoon/100006.jpg" alt=""></i></a></li>
+                    <li><a href="images/cartoon/100007.jpg" data-fancybox="group" data-caption="图片文字说明7"><i><img
+                                    src="images/cartoon/100007.jpg" alt=""></i></a></li>
+                    <li><a href="images/cartoon/100008.jpg" data-fancybox="group" data-caption="图片文字说明8"><i><img
+                                    src="images/cartoon/100008.jpg" alt=""></i></a></li>
+                    <li><a href="images/cartoon/100009.jpg" data-fancybox="group" data-caption="图片文字说明9"><i><img
+                                    src="images/cartoon/100009.jpg" alt=""></i></a></li>
+                    <li><a href="images/cartoon/100010.jpg" data-fancybox="group" data-caption="图片文字说明10"><i><img
+                                    src="images/cartoon/100010.jpg" alt=""></i></a></li>
+                    <li><a href="images/cartoon/100011.jpg" data-fancybox="group" data-caption="图片文字说明11"><i><img
+                                    src="images/cartoon/100011.jpg" alt=""></i></a></li>
+                    <li><a href="images/cartoon/100012.jpg" data-fancybox="group" data-caption="图片文字说明12"><i><img
+                                    src="images/cartoon/100012.jpg" alt=""></i></a></li>
+                    <li><a href="images/cartoon/100013.jpg" data-fancybox="group" data-caption="图片文字说明13"><i><img
+                                    src="images/cartoon/100013.jpg" alt=""></i></a></li>
+                </ul>
+            </div>
+            <div class="diggit"> <a href="JavaScript:void(0)"> 很赞哦！ (<b id="diggnum">3</b>)</a> </div>
+            <div class="clear"></div>
+            <div class="album_next">
+                <ul>
+                    <li><a href="photos_animal_info.html"><span>上一个</span><i><img src="images/animal/100004.jpg"></i>
+                            <h3>中年是下午茶</h3>
+                            <p>2011年06月23日创建</p>
+                        </a></li>
+                    <li><a href="photos_scenery_info.html"><span>下一个</span><i><img src="images/scenery/100003.jpg"></i>
+                            <h3>韩少功的人造雨</h3>
+                            <p>2011年06月23日创建</p>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <footer>
+        <div class="box">
+            <ul class="footer_nav">
+                <li><a href="all_list.html">所有文章</a></li>
+                <li><a href="tags.html">标签合集</a></li>
+            </ul>
+            <div class="guanzhu_img"><i><img src="images/public/wx.png" alt="微信:18792800701">微信号</i> <i><img
+                        src="images/public/beautifulPicture.png" alt="我的相册">我的图集</i></div>
+        </div>
+    </footer>
+    <a href="#" title="返回顶部" class="icon-top"></a>
+</body>
+
+</html>
